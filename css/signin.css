@@ -5,7 +5,7 @@
    
   }
   #signin_body{
-    background: url(assets/images/Home_real/home_main/compass-2946959_1920.jpg);
+    background-color:red;
   }
   section {
     display: flex;
