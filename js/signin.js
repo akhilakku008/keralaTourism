@@ -43,15 +43,18 @@ password.addEventListener('input',function ()
        passlab.style.backgroundColor = "brown"
        passlab.style.width = "225px" 
        passcase.style.color = "yellow"
-       passcase.innerText = "Minimum 8 characters, at least\n one uppercase, and one lower case,\n must contain at least one number";
+    //    passcase.innerText = "Minimum 8 characters, at least\n one uppercase, and one lower case,\n must contain at least one number";
        return false;
    }
    else if(password.value.match(strongPassword)){
 
        passlab.style.backgroundColor = "green"
        passlab.innerText = "Strong";
+    //    passlab.innerText = "Password ";
        passlab.style.width="180px"
-       passcase.innerText = "";
+       passcase.style.color ="cyan"
+       passcase.innerText = "Password succesfully validated";
+       
       
        
    }
@@ -60,14 +63,16 @@ password.addEventListener('input',function ()
     passlab.style.backgroundColor = "orange"
     passlab.style.width="180px"
     passlab.innerText = 'Medium'
+    passcase.innerText = "";
 }
 
 else{
     passlab.style.backgroundColor = 'red'
     passlab.style.width="180px"
     passlab.innerText = 'Poor'
-    passcase.innerText = "One uppercase, and one lower case,\n must contain at least one number"
-    passcase.style.color = "yellow"
+    // passcase.innerText = "One uppercase, and one lower case,\n must contain at least one number"
+    // passcase.style.color = "yellow"
+    passcase.innerText = "";
 }
 });
 

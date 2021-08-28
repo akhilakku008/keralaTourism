@@ -44,6 +44,7 @@ if(password.value == ""){
     passlab.style.width = "225px" 
     passcase.style.color = "yellow"
     passcase.innerText = "Minimum 8 characters, at least\n one uppercase, and one lower case, must contain at least one number"
+    
     return false;
 }
 else if(password.value.match(strongPassword)){

@@ -69,24 +69,24 @@
                    
                       <div class="card col-6 col-lg-2 m-5 ">
                         
-                          <form onsubmit="event.preventDefault()"  class="box" id="box2">
+                          <form action="succesfully page.html" onsubmit="return true"  class="box" id="box2">
                         
                               <h1 style="color:#c3ff1f;">SIGN UP</h1>
                               <p class="text-muted"> Please fill in this form to create an account.</p>
                               
-                               <input type="text" id="email" name="" placeholder="Enter Your Email"> 
+                               <input type="text" id="email" name="" placeholder="Enter Your Email" required> 
                                <label for="email" id="emaillabel">*Email required</label>
 
-                               <input type="text" id="num" name="" placeholder="Mobile no."> 
+                               <input type="text" id="num" name="" placeholder="Mobile no." required> 
                                <label for="number" id="numlabel">*Number required</label>
                                <br>
                                <label for="numtext" id="numtext"></label>
 
-                               <input type="password" id="pass" name="" placeholder="Password"> 
+                               <input type="password" id="pass" name="" placeholder="Password" required> 
                                <label for="password" id="passlabel">*Password required</label>
                                <label for="passcase" id="passcase"></label>
                                <br>
-                               <br>
+                      
                                <label>
                                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
                               </label>
