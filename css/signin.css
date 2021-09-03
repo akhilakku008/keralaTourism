@@ -49,7 +49,7 @@
     background: #191919;
     text-align: center;
     transition: 0.25s;
-    margin-top: -20em;
+    margin-top: -22em;
     margin-left: -5em;
 }
 .box input[type="text"],
@@ -61,11 +61,13 @@
     text-align: center;
     border: 2px solid #3498db;
     padding: 10px 10px;
-    width: 200px;
+    width: 250px;
     outline: none;
     color: white;
     border-radius: 24px;
-    transition: 0.25s
+    transition: 0.25s;
+    position: relative;
+    top: 10px;
 }
 
 .box h1 {
@@ -92,7 +94,11 @@
     color: white;
     border-radius: 24px;
     transition: 0.25s;
-    cursor: pointer
+    cursor: pointer;
+    position: relative;
+    bottom: 35px;
+    position: relative;
+    bottom: 80px;
 }
 
 .box input[type="submit"]:hover {
@@ -114,7 +120,19 @@
     margin-left: -175px;
     /* padding-bottom: 10px; */
     margin-top: -22em;
+    padding: 30px;
   }
+  .formli{
+    position: relative;
+    margin-left: -30px;
+    top: -52px;
+    font-size: 22px;
+    opacity: 2px;
+  
+    cursor: pointer;
+  }
+   
+
   #box2{
     margin-top: -20em;
   }
@@ -131,15 +149,20 @@
     outline: none;
     color: white;
     border-radius: 24px;
-    transition: 0.25s
+    transition: 0.25s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 
   .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-    width: 180px;
+    width: 225px;
     border-color: #2ecc71
 }
+
+
 }
 @media (min-width:1200px) {
   .box{
@@ -216,35 +239,95 @@ a.socialIcon:hover,
     transition: all 0.8s;
 }
 #emaillabel{
+  
    border: 0px solid;
    border-radius: 10px 10px 10px;
-   /* background-color: indigo; */
    background-color: rgba(92, 57, 0); 
    width: 140px; 
-   /* transition: 2s;  */
+   position: relative;
+   top: 10px;
+
+   
 }
 
-#passlabel,#numlabel{
+#passlabel,#numlabel,#emaillabel{
   border: 0px solid;
   border-radius: 12px;
-  /* background-color: indigo; */
+  position: relative;
+  bottom: 40px;
   background-color: rgb(92, 57, 0); 
   width: 170px; 
-  /* transition: 0.2s;  */
+  
 }
-/* input .email_class .valid::before,
-input .email_class.invalid::before{
-  content: "";
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	top: 18px;
-	right: 5px;
-	z-index: 100;
+.validCondition{
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  position: relative;
+  bottom: 40px;
+ text-align:start;
+ margin-left: 18px;
 }
-input .email_class.valid::before{
-	background: url(../assets/check.svg) no-repeat;
+.formli{
+  position: relative;
+  bottom: 45px;
+  left: 90px;
+  font-size: 22px;
+  opacity: 2px;
+
+  cursor: pointer;
 }
-input .email_class.invalid::before{
-	background: url(../assets/error.png) no-repeat;
-} */
+ 
+
+
+
+/* The message box is shown when the user clicks on the password field */
+ #message {
+  display:none;
+  color: #000;
+  position: relative;
+  bottom: 70px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left:50px;
+
+}
+
+#message p {
+ 
+  font-size: 15px;
+}
+#message h3{
+  color: rgb(239, 243, 3);
+  font-size: 18px;
+  
+  
+
+}
+
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔️";
+  font-size: 20px;
+}
+
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "❌";
+}
+
+#Progress{
+  visibility: hidden;
+} 
