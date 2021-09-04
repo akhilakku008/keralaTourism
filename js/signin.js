@@ -90,13 +90,13 @@ myInput.onfocus = function() {
 }
 
 // When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-  document.getElementById("Progress").style.visibility = "hidden";
+// myInput.onblur = function() {
+//   document.getElementById("message").style.display = "none";
+//   document.getElementById("Progress").style.visibility = "hidden";
   
-  passlab.innerHTML = ""
+//   passlab.innerHTML = ""
 
-}
+// }
 
 
 
