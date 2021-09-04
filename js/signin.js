@@ -211,13 +211,18 @@ passwordTextBox.style.backgroundColor = backgroundColor;
 }
 
 
+// function validate(){
+//   if(emailValid() && passField()){
+//       return true;
+//   }else{
+//     return false
+//   }
+// }    
 function validate(){
-  if(emailValid() && passField()){
-      return true;
-  }else{
-    return false
-  }
-}            
+  let a = emailValid();
+  let b = passField();
+  return a && b;
+}        
 
 // 
  

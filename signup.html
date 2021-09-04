@@ -69,29 +69,29 @@
                    
                       <div class="card col-6 col-lg-2 m-5 ">
                         
-                          <form action="succesPage.html"  onsubmit="return passValid()"  class="box" id="box2">
+                          <form action="succesPage.html"  onsubmit="return validate()"  class="box" id="box2">
                         
                               <h1 style="color:#c3ff1f;">SIGN UP</h1>
                               <p class="text-muted"> Please fill in this form to create an account.</p>
 
-                              <input type="text" id="username" name="" placeholder="Username"> 
-                               <label for="user" id="userlabel"></label>
+                              <input type="text" id="username" name="" placeholder="Username" onkeyup="return userName()"> 
+                               <label for="name" id="userlabel"></label>
                               
-                               <input type="text" name="" placeholder="Email" id="email" class="email_class"> 
+                               <input type="text" name="" placeholder="Email" id="email" class="email_class" onkeyup="return emailValid()"> 
                                <label for="email" id="emaillabel"></label>
 
-                               <input type="text" id="num" name="" placeholder="Mobile no." > 
+                               <input type="text" id="num" name="" placeholder="Mobile no." onkeyup="return numField()" > 
                                <label for="number" id="numlabel"></label>
                                <!-- <br> -->
                                <label for="numtext" id="numtext"></label>
 
                                <p>
-                                <input type="password"  id="psw" class="pass"  name="psw" onkeyup="checkPasswordStrength()" placeholder="Password"> 
+                                <input type="password"  id="psw" class="pass"  name="psw" onkeyup="return passMain()" placeholder="Password"> 
                                 <i class="bi bi-eye-slash text-white formli" id="togglePassword"></i>
                                </p>
                                <label for="password" id="passlabel"></label>
                                <!-- reenter pass -->
-                               <input type="password" id="pass1" name="" placeholder="Repeat Password" onkeyup="passRepeat()" > 
+                               <input type="password" id="pass1" name="" placeholder="Repeat Password" onkeyup="return passRepeat()" > 
                                <label for="password" id="passlabel1"></label>
                                
                                <br>
@@ -119,7 +119,7 @@
  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
                               </label>
                                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
-                               <input type="submit" name="" value="SignUp" href="index.html">
+                               <input type="submit" name="" value="SignUp" onsubmit="userName()">
                                 
                                <a class="forgot  text-danger" href="signin.html">Already have account? SignIn</a>
                               <div class="col-md-12">

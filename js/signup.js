@@ -8,12 +8,13 @@ user.onfocus = function(){
 user.onblur = function(){
   userlabel.innerHTML = ""
 }
-user.onkeyup = userName;
+// user.onkeyup = userName;
 function userName(){
   if(user.value.trim()==""){
-    userlabel.innerHTML= "fields cannot be empty"
+    userlabel.innerHTML= "Username cannot be empty"
+    userlabel.style.backgroundColor = "brown"
     user.style.borderColor="red"
-    userlabel.style.width = "200px"
+    userlabel.style.width = "230px"
     return false;
   }
   else{
@@ -49,7 +50,7 @@ email.onfocus = function() {
   }
   
   
-  email.onkeyup = emailValid;
+  // email.onkeyup = emailValid;
   function emailValid()
   {
   // function validate(){
@@ -142,7 +143,8 @@ myInput.onblur = function() {
 }
 
 // When the user starts to type something inside the password field
-myInput.onkeyup = function() {
+// myInput.onkeyup = function() {
+  function passMain(){
   var passwordScore = 0;
   let proPer = document.getElementById("proPer")
  
@@ -326,7 +328,7 @@ number.onblur = function(){
 }
 
 
-number.onkeyup = numField;
+// number.onkeyup = numField;
 function numField(){
   
 // number.addEventListener('input',function(){
@@ -351,11 +353,11 @@ function numField(){
     numlabel.style.width = "200px"  
     numlabel.style.backgroundColor ="green";
     numtext.innerText = "";
-    return true;
+    return false;
 }
 
 else{
-  numlabel.style.backgroundColor = "red";
+  numlabel.style.backgroundColor = "rgb(92, 57, 0)";
   numlabel.innerText = "Number must contain 10 digits";
   numlabel.style.width = "260px" 
   // number.style.borderColor ="brown"
@@ -369,4 +371,19 @@ else{
 //number field End
 
 
+// function validate(){
+//   if(emailValid() && passField() && numField()){
+//       return true;
+//   }else{
+//     return false
+//   }
+// }   
+function validate(){
+  var a = emailValid();
+  var b = passMain();
+  var c = numField();
+  var d = passRepeat();
+  var e = userName();
+  return a && b && c && d && e;
+}
 
