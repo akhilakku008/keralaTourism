@@ -17,7 +17,8 @@ function userName(){
     return false;
   }
   else{
-    userlabel.innerHTML = "Good to go🏍️.."
+    userlabel.innerHTML = "Perfect🏍️.."
+    userlabel.style.width = "180px"
     user.style.borderColor="green"
     return false;
   }
@@ -57,6 +58,7 @@ email.onfocus = function() {
       if(email.value == ""){
           emaillab.innerText = "Email cannot be empty"
           email.style.borderColor ="red"
+          // email.style.border.classList.add('animate__animated', 'animate__bounceOutLeft');
           emaillab.style.backgroundColor = "brown"
           emaillab.style.width = "200px" 
       
@@ -354,10 +356,11 @@ function numField(){
 
 else{
   numlabel.style.backgroundColor = "red";
-  numlabel.innerText = "not a valid number";
-  number.style.borderColor ="red"
+  numlabel.innerText = "Number must contain 10 digits";
+  numlabel.style.width = "260px" 
+  // number.style.borderColor ="brown"
   numtext.innerText = "Accept additional 3 formats:\n XXX-XXX-XXXX, XXX.XXX.XXXX,\n XXX XXX XXXX"
-  numtext.style.color="yellow"
+  // numtext.style.color="yellow"
 
    
     return false;

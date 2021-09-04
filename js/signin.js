@@ -162,7 +162,7 @@ var strength = "";
 
 if (passwordScore >= 80) 
 {
-  strength = "Strong";
+  strength = "Ready to Submit✔️";
   // backgroundColor = "green";
   passlab.style.backgroundColor = "white"
   passlab.innerHTML = ""
@@ -174,7 +174,7 @@ if (passwordScore >= 80)
 }
 else if (passwordScore >= 40) 
 {
-  strength = "Medium";
+  strength = "";
   // backgroundColor = "Orange";
   passlab.style.backgroundColor = "white"
   passlab.style.color = "black"
@@ -184,7 +184,7 @@ else if (passwordScore >= 40)
 }
 else if (passwordScore >= 20) 
 {
-  strength = "Weak";
+  strength = "";
   passlab.style.backgroundColor = "white"
   passlab.style.color = "black"
   // backgroundColor = "maroon";
